@@ -24,24 +24,6 @@ function shuffle(array) {
     return array;
 }
 
-//Timer
-const timerContainer = document.querySelector(".timer");
-let totalSeconds =0;
-timerContainer.innerHTML = `time: ${totalSeconds}`;
-
-let activeTimer;
-
-function timerStart() {
-	activeTimer = setInterval(function() {
-		totalSeconds++;
-		timerContainer.innerHTML = `time: ${totalSeconds}`;
-	}, 1000);
-}
-
-function timerStop() {
-    clearInterval(activeTimer);
-}
-
 //Populating the board and single click
 const deckContainer = document.querySelector('.deck');
 
@@ -100,16 +82,22 @@ function compare(currentCard, previousCard) {
 	}
 }
 
-//End Game
-function gameOver () {
-	setTimeout(function(){
-		if(matches.length === cardList.length){
-			alert (`Game over. You Won!
-				It took you ${totalSeconds} seconds and ${moves} moves to beat the game.
-				Play again and try to beat your score!`);
-			restart();
-		}
-	}, 100);
+//Timer
+const timerContainer = document.querySelector(".timer");
+let totalSeconds = 0;
+timerContainer.innerHTML = `time: ${totalSeconds}`;
+
+let currentTime;
+
+function timerStart() {
+	currentTime = setInterval(function() {
+		totalSeconds++;
+		timerContainer.innerHTML = `time: ${totalSeconds}`;
+	}, 1000);
+}
+
+function timerStop() {
+    clearInterval(currentTime);
 }
 
 //Moves
@@ -117,7 +105,7 @@ const movesContainer = document.querySelector(".moves");
 function addMove() {
 	moves++;
 	movesContainer.innerHTML = moves;
-	rating();
+	starTracker();
 }
 
 //Stars
@@ -125,7 +113,7 @@ const starsContainer = document.querySelector(".stars");
 const star = `<li><i class="fa fa-star"></i></li>`;
 const emptyStar = `<li><i class="fa fa-star-o"></i></li>`;
 starsContainer.innerHTML = star + star + star;
-function rating() {
+function starTracker() {
     if(moves < 10) {
         starsContainer.innerHTML = star + star + star;
     } else if(moves < 15) {
@@ -155,6 +143,18 @@ function restart (){
 	totalSeconds = 0;
 	timerContainer.innerHTML = `time: ${totalSeconds}`;
 	start();
+}
+
+//End Game
+function gameOver () {
+	setTimeout(function(){
+		if(matches.length === cardList.length){
+			alert (`Game over. You Won!
+				It took you ${totalSeconds} seconds and ${moves} moves to beat the game.
+				Play again and try to beat your score!`);
+			restart();
+		}
+	}, 100);
 }
 
 start();
