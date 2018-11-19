@@ -114,14 +114,12 @@ const star = `<li><i class="fa fa-star"></i></li>`;
 const emptyStar = `<li><i class="fa fa-star-o"></i></li>`;
 starsContainer.innerHTML = star + star + star;
 function starTracker() {
-    if(moves < 10) {
+    if(moves < 14) {
         starsContainer.innerHTML = star + star + star;
-    } else if(moves < 15) {
+    } else if(moves < 21) {
         starsContainer.innerHTML = emptyStar + star + star;
-    } else if(moves < 20){
-        starsContainer.innerHTML = emptyStar + emptyStar + star;
     } else {
-    	starsContainer.innerHTML = emptyStar + emptyStar + emptyStar;
+        starsContainer.innerHTML = emptyStar + emptyStar + star;
     }
 }
 
