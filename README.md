@@ -1,15 +1,20 @@
-# MemoryGame
-Memory Game
+# Memory Game Project
 
-The memory game is a simple card matching game. The player selects 2 cards and attempts to match the symbols to fill the board.<br>
-The player is tracked both with a timer and a star rating (dependant on how many attemps it takes).<br>
-The game can be reset manually by the player or is reset automatically when the game is won.<br>
+## Table of Contents
 
-Uses: Font Awesome 4.7 https://fontawesome.com/v4.7.0/ and Google Fonts https://fonts.google.com/<br>
+* [Instructions](#instructions)
+* [Contributing](#contributing)
 
-Made with help from<br>
-the Udacity - Study Jam https://www.youtube.com/watch?v=G8J13lmApkQ
-<br>
-and
-<br>
-Mike Wales https://www.youtube.com/watch?v=x47oLiTpIVk
+## Instructions
+
+The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+
+To get started, open `js/app.js` and start building out the app's functionality
+
+For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+
+## Contributing
+
+This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+
+For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
