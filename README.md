@@ -7,10 +7,9 @@ The game can be reset manually by the player or is reset automatically when the 
 
 Uses: Font Awesome 4.7 https://fontawesome.com/v4.7.0/ and Google Fonts https://fonts.google.com/<br>
 
-Made with help from the Udacity - Study Jam
-https://www.youtube.com/watch?v=G8J13lmApkQ
+Made with help from<br>
+the Udacity - Study Jam https://www.youtube.com/watch?v=G8J13lmApkQ
 <br>
 and
 <br>
-Mike Wales
-https://www.youtube.com/watch?v=x47oLiTpIVk
+Mike Wales https://www.youtube.com/watch?v=x47oLiTpIVk
